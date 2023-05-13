@@ -1,26 +1,25 @@
 #!/usr/bin/python3
-import sys
-from calculator_1 import add, sub, mul, div
 
-if __name__ == '__main__':
-    argc = len(sys.argv)
+if __name__ == "__main__":
+    from sys import argv, exit
+    from calculator_1 import add, sub, mul, div
 
-    if (argc != 4):
+    n = len(argv)
+    if n != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
-
-    op = sys.argv[2]
-    a = int(sys.argv[1])
-    b = int(sys.argv[3])
-
-    if (op != '*' and op != '-' and op != '+' and op != '/'):
+        exit(1)
+    a = int(argv[1])
+    b = int(argv[3])
+    if argv[2] == "+":
+        print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
+    elif argv[2] == "-":
+        print("{} - {} = {}".format(a, b, sub(a, b)))
+    elif argv[2] == "*":
+        argv[2] = "+"
+        print("{} * {} = {}".format(a, b, mul(a, b)))
+    elif argv[2] == "/":
+        print("{} / {} = {}".format(a, b, div(a, b)))
+    else:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
-    elif op == '*':
-        print(f"{a} {op} {b} = {mul(a, b)}")
-    elif op == '+':
-        print(f"{a} {op} {b} = {add(a, b)}")
-    elif op == '-':
-        print(f"{a} {op} {b} = {sub(a, b)}")
-    elif op == '/':
-        print(f"{a} {op} {b} = {div(a, b)}"
+        exit(1)
+    exit(0)
