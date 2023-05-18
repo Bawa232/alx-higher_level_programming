@@ -10,4 +10,4 @@ def common_elements(set_1, set_2):
             if new_set1[i] == new_set[2]:
                 new.append(new_set1[i])
 
-    return new
+    return set(new)
