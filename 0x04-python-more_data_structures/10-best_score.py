@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-
 def best_score(a_dictionary):
+    """Get max integer value in a dictionary
 
-    best_score = None
-    maxVal = -inf
+    Args:
+        a_dictionary (dict): dictionary
 
-    for key, value in a_dictionary.items():
-        if value > maxVal:
-            maxVal = value
-            best_score = key
-
-    return best_score
+    Returns:
+        string: max integer key
+    """
+    if (a_dictionary):
+        d = sorted(a_dictionary.items(), reverse=True, key=lambda x: x[1])
+        return d[0][0]
