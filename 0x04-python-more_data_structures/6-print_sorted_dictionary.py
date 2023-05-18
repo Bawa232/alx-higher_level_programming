@@ -7,4 +7,4 @@ def print_sorted_dictionary(a_dictionary):
     for key in sorted_dict:
         value = a_dictionary[key]
 
-    return (key, value)
+    print(key, value)
