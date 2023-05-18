@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
-def square_matrix_simple(matrix=[]):
+def power(n):
+    return n * n
 
-    if(matrix):
-        return list(map(lampda innerL: [x**2 for x in innerL], matrix))
+
+def square_matrix_simple(matrix=[]):
+    new_matrix = []
+    mx = []
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            new_matrix = map(power, matrix[i])
+        mx.append(list(new_matrix))
+    return mx
