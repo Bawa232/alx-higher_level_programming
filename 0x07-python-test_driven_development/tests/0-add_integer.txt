@@ -1,0 +1,48 @@
+"""
+#module to test file 0-add_integer
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(12,1)
+13
+
+>>> add_integer(1)
+99
+
+>>> add_integer(2.0, 1.0)
+3
+
+>>> add_integer(2, '2rf')
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+
+>>> add_integer('re', 2)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer("Alx", 7)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+
+>>> add_integer(2, float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+"""
