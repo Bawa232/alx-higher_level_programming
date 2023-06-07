@@ -7,7 +7,9 @@ class Rectangle:
     """  A class Rectangle that defines a rectangle: """
 
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
+
         """ Initialize an instance of the class Rectangle.
         Args:
             width(int): width of the rectangle
