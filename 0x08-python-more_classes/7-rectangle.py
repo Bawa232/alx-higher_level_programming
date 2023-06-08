@@ -78,9 +78,9 @@ class Rectangle:
         else:
             for i in range(y):
                 if i == y - 1:
-                    rstr += (self.print_symbol) * x
+                    rstr += str(self.print_symbol) * x
                     break
-                rstr += ((self.print_symbol) * x) + "\n"
+                rstr += str(self.print_symbol) * x + "\n"
             return rstr
 
     def __repr__(self):
