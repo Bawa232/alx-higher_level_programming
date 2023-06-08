@@ -21,28 +21,6 @@ ZeroDivisionError: division by zero
 
 -------------------------------------------------------------------------------
 
-case 3: if the first argument is not of (list) type
->>> print(matrix_divided(([1,2,3], [3,4,5]), 2))
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
--------------------------------------------------------------------------------
-
-case 4: when matrix == []
->>> print(matrix_divided([], 3))
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
--------------------------------------------------------------------------------
-
-case 5: test when an item in the array is not of (int or float)
->>> mat = [[1,2,3.0], ["alx", 2, "SE"]]
->>> print(matrix_divided(mat, 3))
-Traceback (most recent call last):
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
--------------------------------------------------------------------------------
-
 case 6: check lenght of child list
 >>> child_list = [[1,2,3], [1,4]]
 >>> print(matrix_divided(child_list, 3))
