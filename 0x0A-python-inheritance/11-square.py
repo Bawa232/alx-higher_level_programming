@@ -25,4 +25,5 @@ class Square(Rectangle):
         the string representation of
         an object '''
 
+        size = self._size
         return "[Square] {}/{}".format(size, size)
