@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 ''' working with classes and json '''
-import json
 
 
 def class_to_json(obj):
@@ -10,4 +9,4 @@ def class_to_json(obj):
             dictionary description of the object
     '''
 
-    return json.dumps(obj.__dict__)
+    return (obj.__dict__)
