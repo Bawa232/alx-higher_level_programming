@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 ''' converting a ython onject to json '''
+import json
 
 
 def to_json_string(my_obj):
