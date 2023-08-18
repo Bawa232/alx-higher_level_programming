@@ -6,5 +6,5 @@ if (process.argv.length === 2) {
   console.log('Not a number');
 } else {
   const newNum = parseInt(process.argv[2]);
-  console.log(newNum);
+  console.log(`My number: ${newNum}`);
 }
