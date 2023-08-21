@@ -2,15 +2,9 @@
 
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0) {
-      this.width = {};
-    } else {
-        this.width = w;
-    }
-    if (h <= 0) {
-      this.height = {};
-    } else {
-        this.height = h;
+    if (w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
     }
   }
 }
