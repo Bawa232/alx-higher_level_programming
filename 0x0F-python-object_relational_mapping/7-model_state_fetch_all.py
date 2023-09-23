@@ -12,8 +12,8 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     # connect to database using SQLAlchemy
-    username, password, db_name = sys.argv[1:]
-    engine = create_engine(f'mysql://{username}:{password}@localhost:3306/{db_name}')
+    usernm, passw, dbname = sys.argv[1:]
+    engine = create_engine(f'mysql://{usernm}:{passw}@localhost:3306/{dbname}')
     Base.metadata.create_all(engine)
     LocalSession = sessionmaker(bind=engine)
     db = LocalSession()
