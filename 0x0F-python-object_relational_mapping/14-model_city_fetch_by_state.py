@@ -9,18 +9,14 @@ from model_city import City
 
 if __name__ == '__main__':
     # Check command line arguments
-    if len(sys.argv) != 4:
-        print("Usage: {} username password database".format(sys.argv[0]))
-        sys.exit(1)
-
     username, password, database = sys.argv[1:]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+    engine = create_engine('mysql://{}:{}@localhost:3306/{}'.format(
         username, password, database))
 
     # Create session
     LocalSession = sessionmaker(bind=engine)
-    db_session = LocalSession()
-
-    states = db_session.query(City, State).filter(City.state_id == State.id).order_by(City.id)
-    for city, state in states:
+    d = LocalSession()
+    
+    s = d.query(City, State).filter(City.state_id == State.id).order_by(City.id)
+    for city, state in s:
         print(f'{state.name}: ({city.id}) {city.name}')
